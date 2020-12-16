@@ -1,0 +1,20 @@
+
+ <div class="text-center text-danger font-weight-bold">Total no of {{getdata.length}} Employee</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="sm-3 col-md-3 col-lg-3" *ngFor="let data of getdata">
+             <div class="card" style="width:18rem;height:200px;">
+                 <div class="card-body">
+                     <div class="card-title">image section</div>
+                 </div>
+                 <a (click)="details(data.id)" class="btn btn-primary">{{data.first_name}}{{data.last_name}}</a> 
+             </div>
+        </div>
+    </div>
+</div>
+
+
+    <li style="text-decoration: none;" *ngFor="let data of getdata | paginate:{itemsPerPage:8,currentPage:p}"> </li>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+ 
+
