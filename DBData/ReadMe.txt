@@ -1,0 +1,1 @@
+Json File is available in this folder DBDATA, which is used to perform the crud operation
